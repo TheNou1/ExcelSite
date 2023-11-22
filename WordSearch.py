@@ -1,10 +1,7 @@
-# 1. Please complete the following:
-#   Your First name and Last Name: Allan Nounke
-#   Your Student ID: 261179410
-# 2. Write your program here: 
+
 FORWARD = 1
 BACKWARDS = -1
-#Q1
+
 def is_outside_list(letter_list,index):
     """
     checks if index is within bounds or not 
@@ -39,7 +36,7 @@ def is_outside_list(letter_list,index):
         return True
 
 
-#Q2
+
 def letter_positions(letter_list,character):
     """ 
      Counts which indexes within a list a character can be found
@@ -76,7 +73,7 @@ print(letter_positions(['r','w','e','e','t','g','e','e','e','e','e','e','e'
         if letter_list[index] == character:
             found_count.append(index)
     return found_count
-#Q3
+
 def valid_word_pos_direction(letter_list,word,index,direction):
     """ 
     Finds a word within a list of letter
@@ -110,7 +107,7 @@ def valid_word_pos_direction(letter_list,word,index,direction):
 
         return True
     return False
-#Q4
+
 def direction_word_given_position(letter_list,word,index):
     """ calls valid_word_pos_direction to check which direction
      a word can be found. if the word isn't found return an empty list
@@ -153,7 +150,7 @@ def direction_word_given_position(letter_list,word,index):
         success.append(FORWARD)
 
     return success
-#Q5 
+ 
 def position_direction_word(letter_list,word):
     """ combines the results of direction_word_given_position and letter_positions 
     and returns a list of the correct indices and directions
@@ -207,7 +204,7 @@ print(position_direction_word(letter_list,word))
         return successes
         
     return total
-#Q6
+
 def cross_word_position_direction(bool_letter_list,length_word,index,direction):
     """ simulates a crossword being crossed out at specific positions 
     by changing a list of booleans
@@ -258,7 +255,7 @@ print(boolList)
             bool_letter_list[pos] = True
             pos += direction
 
-#Q7
+
 def cross_word_all_position_direction(bool_letter_list,length_word,list_position_direction):
     """calls cross_word_position_direction but for multiple position-direction pairs
      
@@ -303,7 +300,7 @@ print(boolList)
 
         cross_word_position_direction(bool_letter_list,length_word,pair[0],pair[1])
 
-#Q8 
+ 
 def find_magic_word(letter_list,bool_letter_list):
     """Makes a word out of the False elements in a list
     inputs:
@@ -346,7 +343,7 @@ print(find_magic_word(letter_list, bool_letter_list))
     word = ''.join(magic_word)
     return word
 
-#Q9
+
 def word_search(letter_list,word_list):
     """ Calls previous functions to cross out a word in a list of letters
     inputs:
@@ -392,7 +389,7 @@ CwIKIPEDIAOMMODNARP
     return find_magic_word(letter_list,bool_list) 
 
 
-#Q10
+
 def word_search_main(letters,words):
     """turns two string inputs into lists 
     and finds the magic word with word_search
